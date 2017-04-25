@@ -27,6 +27,8 @@ import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.nineinfosys.android.protein.MainActivityDrawer;
+import com.nineinfosys.android.protein.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -44,8 +46,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.nineinfosys.android.protein.MainActivityDrawer;
-import com.nineinfosys.android.protein.R;
 
 import org.json.JSONObject;
 
@@ -238,7 +238,9 @@ public class Login extends AppCompatActivity {
     //Goes to SignUp Activity for registering User
     public void onSignUpClicked(View view) {
         Intent intent = new Intent(this, SignUp.class);
+
         startActivity(intent);
+        finish();
     }
 
     //Login User
@@ -282,8 +284,9 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this,"You are in =)",Toast.LENGTH_LONG).show();
 
                                 Intent intent = new Intent(getApplicationContext(), MainActivityDrawer.class);
-                                startActivity(intent);
                                 finish();
+                                startActivity(intent);
+
                             }
 
                             else {
