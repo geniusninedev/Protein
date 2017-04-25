@@ -3,13 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <group android:id="@+id/grp15" android:checkableBehavior="single" >
-        <item
-            android:id="@+id/Protein"
-            android:icon="@drawable/btn_protein"
-            android:title="Protein" />
 
-    </group>
     <group android:id="@+id/grp16" android:checkableBehavior="single" >
         <item
             android:id="@+id/FoodNutritionTable"
